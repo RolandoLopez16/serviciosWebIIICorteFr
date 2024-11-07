@@ -3,7 +3,7 @@
     --pathlength: 1384;
     width: 45px;
     fill: transparent;
-    stroke: black;
+    stroke: rgb(255, 255, 255);
     stroke-linecap: round;
     stroke-width: 15px;
     stroke-dashoffset: var(--pathlength);

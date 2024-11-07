@@ -29,7 +29,7 @@ function App() {
 const Home = () => {
   return (
     <div className="flex items-center justify-center h-full">
-      <img src="https://reactjs.org/logo-og.png" alt="React Logo" className="w-1/2" />
+      <img src="/assets/logoEmpresa.png" alt="Logo Empresa" className="w-1/2" />
     </div>
   );
 };
