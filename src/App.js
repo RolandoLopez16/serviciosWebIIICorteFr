@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Sidebar from './layouts/Sidebar';
+import Header from './layouts/Header';
+import ConductoresView from './views/ConductoresView';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="flex h-screen">
+        <Sidebar />
+        <div className="flex-1 flex flex-col">
+          <Header />
+          <main className="p-6 flex-1 overflow-y-auto">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/conductores" element={<ConductoresView />} />
+            </Routes>
+          </main>
+        </div>
+      </div>
+    </Router>
   );
 }
+
+// Componente Home para la ruta de inicio
+const Home = () => {
+  return (
+    <div className="flex items-center justify-center h-full">
+      <img src="https://reactjs.org/logo-og.png" alt="React Logo" className="w-1/2" />
+    </div>
+  );
+};
 
 export default App;
