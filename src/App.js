@@ -28,8 +28,8 @@ function App() {
 // Componente Home para la ruta de inicio
 const Home = () => {
   return (
-    <div className="flex items-center justify-center h-full">
-      <img src="/assets/logoEmpresa.png" alt="Logo Empresa" className="w-1/2" />
+    <div className="flex items-center justify-center h-full w-full" >
+      <img src="/assets/logoEmpresa.png" alt="Logo Empresa" className="w-80 h-80 object-contain" />
     </div>
   );
 };

@@ -35,7 +35,7 @@ const ConductoresForm = ({ conductorEdit, onFormSubmit }) => {
 
   return (
     <div className="flex flex-col items-center bg-gray-100 py-6">
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-md mb-6">
+      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md w-full max-w-md mb-6 justi">
         <h2 className=" text-2xl font-bold mb-4 text-red-500 text-center">{conductorEdit ? 'Actualizar Conductor' : 'Agregar Conductor'}</h2>
 
         {conductorEdit && (

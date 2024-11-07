@@ -39,8 +39,8 @@ const ConductoresTable = ({ conductores, onEdit, onDelete }) => {
             <td className="py-2 px-4">{conductor.fechaLicencia}</td>
             <td className="py-2 px-4">{conductor.tarifaPorServicio}</td>
             <td className="py-2 px-4">
-              <button onClick={() => onEdit(conductor)} className="bg-green-600 text-white py-1 px-3 rounded mr-2 hover:bg-green-600">Editar</button>
-              <button onClick={() => handleDelete(conductor._id)} className="bg-red-500 text-white py-1 px-3 rounded hover:bg-red-600">Eliminar</button>
+              <button onClick={() => onEdit(conductor)} className="bg-green-600 text-white py-1 px-3 rounded mr-2 hover:bg-lime-900">Editar</button>
+              <button onClick={() => handleDelete(conductor._id)} className="bg-red-500 text-white py-1 px-3 rounded hover:bg-red-900">Eliminar</button>
             </td>
           </tr>
         ))}
