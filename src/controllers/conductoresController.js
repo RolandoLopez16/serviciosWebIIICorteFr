@@ -1,5 +1,6 @@
 // src/controllers/conductoresController.js
 
+//const API_BASE = "https://apiservi.vercel.app";
 const API_BASE = "https://apiservi.vercel.app";
 
 // Función para obtener todos los conductores
@@ -39,7 +40,7 @@ export const createConductor = async (conductorData) => {
 // Función para actualizar un conductor existente
 export const updateConductor = async (id, conductorData) => {
   try {
-    const response = await fetch(`${API_BASE}/conductores/${id}`, {
+    const response = await fetch(`${API_BASE}/api/conductores/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -59,7 +60,7 @@ export const updateConductor = async (id, conductorData) => {
 // Función para eliminar un conductor
 export const deleteConductor = async (id) => {
   try {
-    const response = await fetch(`${API_BASE}/conductores/${id}`, {
+    const response = await fetch(`${API_BASE}/api/conductores/${id}`, {
       method: 'DELETE',
     });
     if (!response.ok) {
