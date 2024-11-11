@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './layouts/Sidebar';
 import Header from './layouts/Header';
 import ConductoresView from './views/ConductoresView';
+import HomeView from './views/HomeView';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Header />
           <main className="p-6 flex-1 overflow-y-auto">
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/" element={<HomeView />} />
               <Route path="/conductores" element={<ConductoresView />} />
             </Routes>
           </main>
@@ -24,14 +25,5 @@ function App() {
     </Router>
   );
 }
-
-// Componente Home para la ruta de inicio
-const Home = () => {
-  return (
-    <div className="flex items-center justify-center h-full w-full" >
-      <img src="/assets/logoEmpresa.png" alt="Logo Empresa" className="w-80 h-80 object-contain" />
-    </div>
-  );
-};
 
 export default App;
