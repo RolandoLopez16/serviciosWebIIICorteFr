@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
+import Loader from "../components/loader/loader";
 
 const HomeView = () => {
   const [showSwagger, setShowSwagger] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const toggleSwaggerView = () => {
     setShowSwagger(!showSwagger);
+    if (!showSwagger) {
+      setIsLoading(true); // Muestra el loader cuando se muestra el iframe
+    }
+  };
+
+  const handleIframeLoad = () => {
+    setIsLoading(false); // Oculta el loader una vez que el iframe ha cargado
   };
 
   return (
@@ -29,12 +38,18 @@ const HomeView = () => {
 
       {showSwagger && (
         <div className="flex justify-center">
+          {isLoading && (
+            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-50 bg-white">
+              <Loader /> {/* Utiliza el componente Loader */}
+            </div>
+          )}
           <iframe
             src="https://apiservi.vercel.app/swagger/"
             title="Documentación API Swagger"
             width="100%"
             height="600px"
             className="border border-gray-300 rounded-lg"
+            onLoad={handleIframeLoad}
           ></iframe>
         </div>
       )}

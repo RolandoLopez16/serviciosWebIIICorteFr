@@ -12,12 +12,11 @@ const ConductoresView = () => {
   const [conductorEdit, setConductorEdit] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Cargar conductores al montar el componente
+ 
   useEffect(() => {
     loadConductores();
   }, []);
 
-  // Función para cargar la lista de conductores desde la API
   const loadConductores = async () => {
     try {
       const data = await getConductores();
@@ -29,20 +28,20 @@ const ConductoresView = () => {
     }
   };
 
-  // Manejar envío del formulario
+
   const handleFormSubmit = () => {
-    loadConductores(); // Recargar la lista de conductores
-    setConductorEdit(null); // Limpiar el conductor en edición
+    loadConductores(); 
+    setConductorEdit(null); 
   };
 
-  // Manejar edición de conductor
+
   const handleEdit = (conductor) => {
     setConductorEdit(conductor);
   };
 
-  // Manejar eliminación de conductor
+
   const handleDelete = () => {
-    loadConductores(); // Recargar la lista de conductores después de eliminar
+    loadConductores(); 
   };
 
   return (
