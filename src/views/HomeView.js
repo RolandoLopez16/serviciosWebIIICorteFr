@@ -31,7 +31,7 @@ const HomeView = () => {
       <div className="flex justify-center mb-4">
         <button
           onClick={toggleSwaggerView}
-          className='bg-red-700 text-white font-bold py-2 px-4 rounded
+          className='bg-red-500 text-white font-bold py-2 px-4 rounded
           hover:bg-red-900 transition-colors duration-300'>
           {showSwagger ? 'Ocultar Documentación' : 'Ver Documentación'}
         </button>
