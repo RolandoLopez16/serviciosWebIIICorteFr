@@ -1,4 +1,3 @@
-// src/models/Conductor.js
 
 class Conductor {
     constructor(nombre = '', apellido = '', cedula = '', fechaLicencia = '', tarifaPorServicio = 0) {

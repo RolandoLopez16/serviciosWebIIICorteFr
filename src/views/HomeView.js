@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Loader from "../components/loader/loader";
 
+
 const HomeView = () => {
   const [showSwagger, setShowSwagger] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -8,12 +9,12 @@ const HomeView = () => {
   const toggleSwaggerView = () => {
     setShowSwagger(!showSwagger);
     if (!showSwagger) {
-      setIsLoading(true); // Muestra el loader cuando se muestra el iframe
+      setIsLoading(true); 
     }
   };
 
   const handleIframeLoad = () => {
-    setIsLoading(false); // Oculta el loader una vez que el iframe ha cargado
+    setIsLoading(false); 
   };
 
   return (
@@ -30,8 +31,8 @@ const HomeView = () => {
       <div className="flex justify-center mb-4">
         <button
           onClick={toggleSwaggerView}
-          className="bg-red-700 text-white font-bold py-2 px-4 rounded hover:bg-red-900 transition-colors duration-300"
-        >
+          className='bg-red-700 text-white font-bold py-2 px-4 rounded
+          hover:bg-red-900 transition-colors duration-300'>
           {showSwagger ? 'Ocultar Documentación' : 'Ver Documentación'}
         </button>
       </div>
@@ -40,7 +41,7 @@ const HomeView = () => {
         <div className="flex justify-center">
           {isLoading && (
             <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-50 bg-white">
-              <Loader /> {/* Utiliza el componente Loader */}
+              <Loader />
             </div>
           )}
           <iframe

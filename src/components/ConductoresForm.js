@@ -1,5 +1,3 @@
-// src/components/ConductoresForm.js
-
 import React, { useState, useEffect } from 'react';
 import { createConductor, updateConductor } from '../controllers/conductoresController';
 import Conductor from '../models/Conductor';

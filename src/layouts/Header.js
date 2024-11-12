@@ -1,4 +1,3 @@
-// src/layouts/Header.js
 
 import React from 'react';
 import Truck from '../components/truck/truck';

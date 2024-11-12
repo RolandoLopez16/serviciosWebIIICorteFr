@@ -1,6 +1,3 @@
-// src/controllers/conductoresController.js
-
-//const API_BASE = "https://apiservi.vercel.app";
 const API_BASE = "https://apiservi.vercel.app";
 
 // Función para obtener todos los conductores

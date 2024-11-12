@@ -1,5 +1,3 @@
-// src/components/ConductoresTable.js
-
 import React from 'react';
 import { deleteConductor } from '../controllers/conductoresController';
 

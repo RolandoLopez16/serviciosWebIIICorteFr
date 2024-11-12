@@ -1,5 +1,3 @@
-// src/layouts/Sidebar.js
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HomeIcon, CarIcon } from 'lucide-react';
