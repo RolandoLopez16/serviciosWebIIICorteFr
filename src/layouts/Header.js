@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="bg-red-500 text-white p-4 flex justify-between items-center">
       <Truck/>
-      <h1 className="text-center text-3xl font-bold">App Serviespeciales López</h1>
+      <h1 className="text-center text-3xl font-bold">Aplicación Serviespeciales López</h1>
       <Truck/>
     </header>
   );
